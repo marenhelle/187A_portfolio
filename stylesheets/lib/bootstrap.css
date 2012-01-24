@@ -112,7 +112,7 @@ section {
 audio, canvas, video {
   display: inline-block;
   *display: inline;
-  *zoom: 1;
+  *
 }
 audio:not([controls]) {
   display: none;
@@ -191,14 +191,14 @@ body {
 
 .container {
   width: 940px;
-  margin-left: 30px;
+  margin-left: 20px;
   margin-right: 90px;
-  zoom: 1;
+  
 }
 .container:before, .container:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 .container:after {
   clear: both;
@@ -208,13 +208,13 @@ body {
   min-width: 940px;
   padding-left: 100px;
   padding-right: 70px;
-  zoom: 1;
+  
   background color: #FFEBCD
 }
 .container-fluid:before, .container-fluid:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 .container-fluid:after {
   clear: both;
@@ -230,23 +230,19 @@ body {
   font-size: 30px;
   font-weight: bold;
   line-height: 18px;
-  color: grey
+  width: 250px;
+  color: grey;
+  float: left;
 }
-.container-fluid > .content {
-   position: absolute;
-  top: 100;
-  left: 30px;
-  width: 150px;
-}
+
 a {
-  color: #0069d6;
+  color: grey;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
 }
 a:hover {
-  color: #00438a;
-  text-decoration: underline;
+  color: black;
 }
 .pull-right {
   float: right;
@@ -261,22 +257,29 @@ a:hover {
   display: block;
 }
 .content {
-  border: 0px dashed black;
-  zoom: 1;
-  margin-left: 200px;
-  margin-top: 130px;
-  background color: #eeeee0;
+  border: none;
+  margin-top: 20px;
+  width: 600px;
+  float:left;
 }
-.content table{
-  border:0px hidden black;
+.portpics{
+  border:10px;
   background-color:#eeeee0;
-  width:100px;
-  height:10px;
+  width:560px;
+  height:560px;
+  
 }
+.portpics > a > img {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 170px;
+  width: 170px
+}
+
 .content:before, .content:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 .content:after {
   clear: both;
@@ -320,119 +323,19 @@ top:185px;
   position:fixed;
 top:209px;
 }
-.span4 {
-  width: 220px;
+.RVM {
+  width: 350px;
+  height: 400px;
+  background-color:#eeeee0;
 }
-.span5 {
-  width: 280px;
-}
-.span6 {
+.RVMtext {
   width: 340px;
+  margin: 10px;
 }
-.span7 {
-  width: 400px;
-}
-.span8 {
-  width: 460px;
-}
-.span9 {
-  width: 520px;
-}
-.span10 {
-  width: 580px;
-   position:fixed;
-left:0px;
-top:180px;
-}
-.span11 {
-  width: 640px;
-}
-.span12 {
-  width: 700px;
-}
-.span13 {
-  width: 760px;
-}
-.span14 {
-  width: 820px;
-}
-.span15 {
-  width: 880px;
-}
-.span16 {
-  width: 940px;
-}
-.span17 {
-  width: 1000px;
-}
-.span18 {
-  width: 1060px;
-}
-.span19 {
-  width: 1120px;
-}
-.span20 {
-  width: 1180px;
-}
-.span21 {
-  width: 1240px;
-}
-.span22 {
-  width: 1300px;
-}
-.span23 {
-  width: 1360px;
-}
-.span24 {
-  width: 1420px;
-}
-.row > .offset1 {
-  margin-left: 80px;
-}
-.row > .offset2 {
-  margin-left: 140px;
-}
-.row > .offset3 {
-  margin-left: 200px;
-}
-.row > .offset4 {
-  margin-left: 260px;
-}
-.row > .offset5 {
-  margin-left: 320px;
-}
-.row > .offset6 {
-  margin-left: 380px;
-}
-.row > .offset7 {
-  margin-left: 440px;
-}
-.row > .offset8 {
-  margin-left: 500px;
-}
-.row > .offset9 {
-  margin-left: 560px;
-}
-.row > .offset10 {
-  margin-left: 620px;
-}
-.row > .offset11 {
-  margin-left: 680px;
-}
-.row > .offset12 {
-  margin-left: 740px;
-}
-.span-one-third {
-  width: 300px;
-}
-.span-two-thirds {
-  width: 620px;
-}
-.row > .offset-one-third {
-  margin-left: 340px;
-}
-.row > .offset-two-thirds {
-  margin-left: 660px;
+.RVMpics {
+  width: 340px;
+  margin: 10px;
+  
 }
 /* Typography.less
  * Headings, body text, lists, code, and more for a versatile and durable typography system
@@ -492,7 +395,9 @@ h3 small {
   font-size: 14px;
 }
 h4 {
-  font-size: 16px;
+  font-size: 12px;
+  margin-bottom: 3px;
+  line-height: 20px;
 }
 h4 small {
   font-size: 12px;
@@ -544,11 +449,6 @@ dl dt {
 }
 dl dd {
   margin-left: 9px;
-}
-hr {
-  margin: 20px 0 19px;
-  border: 0;
-  border-bottom: 1px solid #eee;
 }
 strong {
   font-style: inherit;
@@ -642,12 +542,12 @@ fieldset legend {
 }
 form .clearfix {
   margin-bottom: 18px;
-  zoom: 1;
+  
 }
 form .clearfix:before, form .clearfix:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 form .clearfix:after {
   clear: both;
@@ -1170,10 +1070,6 @@ table th {
   font-weight: bold;
   vertical-align: middle;
 }
-table td {
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-}
 table tbody th {
   border-top: 1px solid #ddd;
   vertical-align: top;
@@ -1614,7 +1510,7 @@ a.menu:after, .dropdown-toggle:after {
   margin-left: 0;
   margin-right: 0;
   padding: 6px 0;
-  zoom: 1;
+  
   border-color: #999;
   border-color: rgba(0, 0, 0, 0.2);
   border-style: solid;
@@ -1688,7 +1584,7 @@ a.menu:after, .dropdown-toggle:after {
   margin: 0 0 18px;
   padding: 0;
   list-style: none;
-  zoom: 1;
+  
 }
 .tabs:before,
 .pills:before,
@@ -1696,7 +1592,7 @@ a.menu:after, .dropdown-toggle:after {
 .pills:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 .tabs:after, .pills:after {
   clear: both;
@@ -2282,13 +2178,13 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -webkit-box-shadow: inset 0 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
-  zoom: 1;
+  
   margin-bottom: 0;
 }
 .modal-footer:before, .modal-footer:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 .modal-footer:after {
   clear: both;
@@ -2484,12 +2380,12 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .media-grid {
   margin-left: -20px;
   margin-bottom: 0;
-  zoom: 1;
+  
 }
 .media-grid:before, .media-grid:after {
   display: table;
   content: "";
-  zoom: 1;
+  
 }
 .media-grid:after {
   clear: both;
